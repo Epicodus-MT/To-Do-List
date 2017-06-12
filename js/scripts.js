@@ -14,7 +14,10 @@ $(document).ready(function () {
 
     var newTask = new Task(inputtedTask);
 
-    $("ul#task-list").append("<li id='task'>" + newTask.task + "</li>");
+    $("#task-list").append('<div class="checkbox">' +
+                                '<label><input type="checkbox" value="">' +
+                                newTask.task + '</label>' +
+                              '</div>');
 
     $("input#new-task").val("");
   })
