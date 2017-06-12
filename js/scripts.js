@@ -22,4 +22,18 @@ $(document).ready(function () {
     $("input#new-task").val("");
   })
 
+  $("form#doneForm").submit(function(event){
+    event.preventDefault();
+
+    $(".checkbox").each(function(){
+
+      if ($(this).find('input').is(':checked')) {
+        $(this).remove();
+      }
+
+
+    });
+
+  });
+
 });
